@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,max,m,n;
+    printf("enter number of rows:");
+    scanf("%d",&m);
+    printf("enter number of columns:");
+    scanf("%d",&n);
+    int a[m][n];
+    printf("enter elements of matrix:");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+    }
+    }
+    printf("matrix is : \n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d \t",a[i][j]);
+            }
+            printf("\n");
+    }
+    for(i=0;i<m;i++){
+        max=a[i][0];
+        int max_col=0;
+        for(j=0;j<n;j++){
+           if(a[i][j]>max){
+               max=a[i][j];
+               max_col=j;
+           }
+        }
+        printf("Maximum element in row %d is %d at position (row: %d, column: %d)\n", i, max, i, max_col);
+    }
+    
+    return 0;
+}
