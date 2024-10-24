@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int f,i,j,k,r,c,max,min;
+    int a[3][3];
+    printf("enter elements of matrix:");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            scanf("%d",&a[i][j]);
+    }
+    }
+    printf("matrix is : \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d \t",a[i][j]);
+            }
+            printf("\n");
+    }
+    for(i=0;i<3;i++){
+        min=a[i][0];
+        c=0;
+        for(j=0;j<3;j++){
+           if(a[i][j]<min){
+               min=a[i][j];
+               c=j;
+           }
+    }
+        max=0;
+        for(k=0;k<3;k++){
+           if(a[k][j]>max){
+               max=a[k][j];
+           }
+        }
+        if(max==min){
+                f=1;
+                printf("saddle point is: %d",max);
+        }
+    }
+    if(f==0)
+    printf("there is no saddle point in matrix.");
+    return 0;
+}
